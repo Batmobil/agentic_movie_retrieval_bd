@@ -66,6 +66,9 @@ agent = Agent(
         "1. User asks: 'Find actors in CHOCOLAT'",
         "2. You determine this requires the /search/actors-in-film endpoint",
         "3. You call make_request with endpoint='search/actors-in-film', method='GET', params={'film_title': 'CHOCOLAT'}",
+        "   IMPORTANT: Always pass query parameters in the 'params' dictionary, not as direct arguments",
+        "   CORRECT: make_request(endpoint='search/actors-in-film', method='GET', params={'film_title': 'CHOCOLAT'})",
+        "   INCORRECT: make_request(endpoint='search/actors-in-film', method='GET', film_title='CHOCOLAT')",
         "4. You receive a JSON response with actor information",
         "5. You format and present this information to the user in a clear, structured way",
         
